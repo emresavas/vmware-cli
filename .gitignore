@@ -1,0 +1,6 @@
+*.class
+build/
+dist/
+.idea/
+*.iml
+.DS_Store
