@@ -18,7 +18,7 @@ public class Main {
             System.out.println("connected: " + url);
             System.out.println("about:     " + c.si().getAboutInfo().getFullName());
             // komutlar bir sonraki commit'te
-            if (!"ping".equals(cmd)) {
+            if ("list".equals(cmd)) { VmList.run(c); } else if (!"ping".equals(cmd)) {
                 System.out.println("bilinmeyen komut: " + cmd);
             }
         } catch (Exception e) {
@@ -33,6 +33,8 @@ public class Main {
         System.out.println("kullanim: vmware-cli <url> <user> <pass> <komut>");
         System.out.println();
         System.out.println("komutlar:");
-        System.out.println("  ping");
+        System.out.println("  ping
+  list
+  info <name>");
     }
 }
