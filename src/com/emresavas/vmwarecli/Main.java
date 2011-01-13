@@ -18,7 +18,15 @@ public class Main {
             System.out.println("connected: " + url);
             System.out.println("about:     " + c.si().getAboutInfo().getFullName());
             // komutlar bir sonraki commit'te
-            if ("list".equals(cmd)) { VmList.run(c); } else if (!"ping".equals(cmd)) {
+            if ("list".equals(cmd)) {
+                VmList.run(c);
+            } else if ("info".equals(cmd)) {
+                if (args.length < 5) {
+                    System.out.println("kullanim: info <name>");
+                    return;
+                }
+                VmInfo.run(c, args[4]);
+            } else if (!"ping".equals(cmd)) {
                 System.out.println("bilinmeyen komut: " + cmd);
             }
         } catch (Exception e) {
