@@ -20,6 +20,15 @@ public class Main {
             // komutlar bir sonraki commit'te
             if ("list".equals(cmd)) {
                 VmList.run(c);
+            } else if ("on".equals(cmd)) {
+                if (args.length < 5) { System.out.println("kullanim: on <name>"); return; }
+                VmPower.on(c, args[4]);
+            } else if ("off".equals(cmd)) {
+                if (args.length < 5) { System.out.println("kullanim: off <name>"); return; }
+                VmPower.off(c, args[4]);
+            } else if ("reset".equals(cmd)) {
+                if (args.length < 5) { System.out.println("kullanim: reset <name>"); return; }
+                VmPower.reset(c, args[4]);
             } else if ("info".equals(cmd)) {
                 if (args.length < 5) {
                     System.out.println("kullanim: info <name>");
@@ -43,6 +52,9 @@ public class Main {
         System.out.println("komutlar:");
         System.out.println("  ping
   list
-  info <name>");
+  info <name>
+  on <name>
+  off <name>
+  reset <name>");
     }
 }
