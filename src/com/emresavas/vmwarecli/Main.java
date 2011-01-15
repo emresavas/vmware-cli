@@ -20,6 +20,8 @@ public class Main {
             // komutlar bir sonraki commit'te
             if ("list".equals(cmd)) {
                 VmList.run(c);
+            } else if ("ds".equals(cmd)) {
+                DsList.run(c);
             } else if ("on".equals(cmd)) {
                 if (args.length < 5) { System.out.println("kullanim: on <name>"); return; }
                 VmPower.on(c, args[4]);
@@ -55,6 +57,7 @@ public class Main {
   info <name>
   on <name>
   off <name>
-  reset <name>");
+  reset <name>
+  ds");
     }
 }
