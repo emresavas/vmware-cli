@@ -22,6 +22,8 @@ public class Main {
                 VmList.run(c);
             } else if ("ds".equals(cmd)) {
                 DsList.run(c);
+            } else if ("hosts".equals(cmd)) {
+                HostList.run(c);
             } else if ("on".equals(cmd)) {
                 if (args.length < 5) { System.out.println("kullanim: on <name>"); return; }
                 VmPower.on(c, args[4]);
@@ -58,6 +60,7 @@ public class Main {
   on <name>
   off <name>
   reset <name>
-  ds");
+  ds
+  hosts");
     }
 }
