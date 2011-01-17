@@ -2,6 +2,10 @@ package com.emresavas.vmwarecli;
 
 public class Main {
 
+    static void log(String m) {
+        System.out.println("[" + new java.text.SimpleDateFormat("HH:mm:ss").format(new java.util.Date()) + "] " + m);
+    }
+
     public static void main(String[] args) {
         if (args.length < 4) {
             usage();
@@ -43,7 +47,8 @@ public class Main {
                 System.out.println("bilinmeyen komut: " + cmd);
             }
         } catch (Exception e) {
-            System.err.println("hata: " + e.getMessage());
+            System.err.println("[hata] " + e.getMessage());
+            e.printStackTrace();
             System.exit(1);
         } finally {
             if (c != null) c.disconnect();
