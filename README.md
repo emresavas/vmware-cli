@@ -1,5 +1,7 @@
 # vmware-cli
 
+> Old repo. Built while I was figuring out cloud topologies like IaaS, PaaS, virtualization and networking. There may be implementation mistakes. Not actively maintained.
+
 VMware vSphere / ESX(i) icin kucuk bir Java CLI. vim25 SDK uzerinde
 calisiyor (vSphere 4.1 ile test edildi, 5.0 da uyumlu olmali).
 
